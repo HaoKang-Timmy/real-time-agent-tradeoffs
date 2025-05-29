@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Clock, Target, Zap, TrendingUp, Users, Award } from "lucide-react";
+import { Clock, Target, Zap, TrendingUp, Users, Award, Play } from "lucide-react";
 
 const Index = () => {
   const authors = [
@@ -74,6 +74,31 @@ const Index = () => {
             </Button>
           </div>
         </div>
+
+        {/* Video Section */}
+        <Card className="mb-12 shadow-lg border-0 bg-white/70 backdrop-blur-sm">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl flex items-center justify-center gap-2">
+              <Play className="h-6 w-6 text-blue-600" />
+              Research Demo
+            </CardTitle>
+            <CardDescription className="text-lg">
+              Watch our demonstration of real-time LLM agent performance under latency constraints
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex justify-center">
+            <div className="w-full max-w-4xl">
+              <video 
+                controls 
+                className="w-full rounded-lg shadow-lg"
+                poster="/placeholder.svg"
+              >
+                <source src="https://github.com/user-attachments/assets/29ac29d2-041c-492a-a142-c51c22e74e41" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Abstract Card */}
         <Card className="mb-12 shadow-lg border-0 bg-white/70 backdrop-blur-sm">
